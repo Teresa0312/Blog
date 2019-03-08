@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../CSS/nav.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/manage.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/mycenter.css"/>
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	 
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="../index.html"><strong>BLOG</strong></a>
+		</div><!-- navbar-header end -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		 <ul class="nav navbar-nav">
+			<li><a href="#">账号管理</a></li>
+			<li><a href="Article.html">文章管理</a></li>
+			<li><a href="Album.html">相册管理</a></li>
+			<li><a href="Video.html">视频管理</a></li>
+			<li><a href="Message.html">留言管理</a></li>
+		  </ul><!-- nav navbar-nav end -->
+		  <ul class="nav navbar-nav navbar-right">
+			<li id="signin"><a href="../index.html">首页</a></li>
+		  </ul> 
+		</div><!-- collapse navbar-collapse end -->
+
+	</nav><!-- nav end -->
+
+	<div class="container-fluid">
+	  <ul class="nav nav-tabs" role="tablist" id="myTab">
+	    <li role="presentation" class="active">
+	    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">基本信息</a>
+	    </li>
+	    <li role="presentation">
+	    <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">密码保护</a>
+	    </li>
+	  </ul>
+
+
+	  <div class="tab-content" id="useWidth">
+	    <div role="tabpanel" class="tab-pane fade in active" id="home">
+	    	<div class="row" id="showInfor">
+			  <div class=" col-sm-6 col-md-4 row-left">
+			    <div class="thumbnail">
+			      <img src="">
+			      <div class="caption">
+			        
+			        <p class="signature">
+			        	<span>个性签名 Signature：</span><br/>
+						<span class="value" id="gexing"></span>
+			        </p>
+			        
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-8"  style="border-left: 1px solid gray">
+			  <button class="btn btn-success" id="alterInfor">修改信息</button>
+			  		<div class="fdata">
+						  <p><span>用户名 Username ：</span>
+					  <span class="value" id="name"></span></p>     
+					</div>
+					<div class="fdata">
+						  <p><span>手机号 PhoneNumber ：</span>
+						  <span class="value" id="phoneNumber"></span></p>     
+					</div>
+					<div class="fdata">
+						  <p><span>生日 Birth ：</span>
+						  <span class="value" id="birth">
+						  </span></p>     
+					</div>
+					<div class="fdata">
+						  <p><span>星座 Star ：</span>
+						  <span class="value" id="star">
+						  </span></p>     
+					</div>
+					<div class="fdata">
+						  <p><span>QQ号码 QQ ：</span>
+						  <span class="value" id="qqNumber">
+						  </span></p>     
+					</div>
+					<div class="fdata">
+						  <p><span>邮箱 E-mail ：</span>
+						  <span class="value" id="e-mail">
+						  </span></p>     
+					</div>
+
+			  </div>
+			 </div>
+			 <div class="row"  style="display: none" id="alterForm">
+			  <div class=" col-sm-6 col-md-4 row-left">
+			    <div class="thumbnail">
+			      <img src="">
+			      <div class="caption">
+			        <h3  id="Username-left"></h3>
+			        <p class="signature">
+			        <script type="text/javascript">
+						function saveReport(){
+							$("#uploadProfile").ajaxSubmit(function(data){ 
+								console.log(data);
+								if(data.code==0)
+									alert("修改头像成功!");
+								else
+									alert("修改头像失败!");
+							}); 
+							return false; // 必须返回false，否则表单会自己再做一次提交操作，并且页面跳转 
+						}
+					</script>
+			        <form action="http://1483104508.55555.io/blog/UP?method=upTou"  method="post"  enctype="multipart/form-data"  onsubmit="return saveReport()" id="uploadProfile">
+			        	<input type="text" class="form-control" name="usertel" id="inputNone" style="display: none;">
+			        	<input id="inputFile" name="picture" class="btn-file-molding" type="file">
+			        </p>
+			         <input type="submit" id="alterProfile" class="btn btn-warning" value="修改头像"/>
+			         <form>
+			        
+			      </div>
+			    </div>
+			  </div>
+			  <div class="col-sm-6 col-md-8"  style="border-left: 1px solid gray">
+
+			 	<div class="col-md-6">
+			 	<button type="button" class="btn btn-success" id="backInfor">返回</button>
+			  		<form id="setInfor" class="form-inline">
+					  <div class="form-group">用户名：
+						<label for="name">Name</label>
+						<input type="text" class="form-control" id="inputName">
+					  </div>
+					  <div class="form-group">个性签名：<br/>
+						<textarea class="form-control" rows="5" cols="30" style="resize: none;" id="inputSign"></textarea>
+					  </div><br/><br/>
+					   <input type="button" id="btnSubmit_1" class="btn btn-warning" value="修改资料"/>
+					</form>
+				</div>
+				<div class="col-md-6">
+					<form class="form-inline">
+					  <div class="form-group">生日：
+						<label for="birth">Birth</label>
+						<input type="text" class="form-control" id="inputBirth">
+					  </div><br/>
+					  <div class="form-group">星座：
+						<label for="star">Star</label>
+						<select class="form-control" style="width:200px" id="inputStar">
+						  <option value="白羊座">白羊座</option>
+						  <option value="金牛座">金牛座</option>
+						  <option value="双子座">双子座</option>
+						  <option value="巨蟹座">巨蟹座</option>
+						  <option value="狮子座">狮子座</option>
+						  <option value="处女座">处女座</option>
+						  <option value="天秤座">天秤座</option>
+						  <option value="天蝎座">天蝎座</option>
+						  <option value="射手座">射手座</option>
+						  <option value="摩羯座">摩羯座</option>
+						  <option value="水瓶座">水瓶座</option>
+						  <option value="双鱼座">双鱼座</option>
+						</select>
+					  </div><br/>
+					  <div class="form-group">Q Q：
+						<label for="qq">QQ</label>
+						<input type="text" class="form-control" id="inputQQ">
+					  </div><br/>
+					  <div class="form-group">邮箱：
+						<label for="mail">E-mail</label>
+						<input type="text" class="form-control" id="inputMail">
+					  </div>
+					</form>
+			  	</div>
+			  </div>
+			 </div>
+	    </div>
+	    <div role="tabpanel" class="tab-pane fade" id="settings">
+	    	<div class="row">
+			  <div class=" col-sm-6 col-md-4 row-left">
+			    <div class="thumbnail">
+			      <img id="picture" src="">
+			      <div class="caption">
+			        
+			        <p class="signature">
+			        	<span>个性签名 Signature：</span><br/>
+						<span class="value" id="gexing"></span>
+			        </p>
+			      </div>
+			    </div>
+			  </div>
+			  <div  id="PwdProtect_1"  class="col-sm-6 col-md-8"  style="border-left: 1px solid gray" >
+			  	<form  id="settingFrom" class="form-inline">
+			  	<h2>您未设置密保问题，请设置。</h2><br/>
+					  <div class="form-group">问题1：
+						<label for="InputQue">Que1</label>
+						<input type="text" class="form-control" name="question" id="InputQue">
+						答案1：<input type="text" class="form-control" name="answer" id="InputAns">
+					  </div><br/>
+					  <div class="form-group">问题2：
+						<label for="InputQue">Que2</label>
+						<input type="text" class="form-control" id="InputQue" name="question">
+						答案2：<input type="text" class="form-control" id="InputAns" name="answer">
+					  </div><br/>
+					  <div class="form-group">问题3：
+						<label for="InputQue">Que3</label>
+						<input type="text" class="form-control" id="InputQue" name="question">
+						答案3：<input type="text" class="form-control" id="InputAns" name="answer">
+					  </div><br/>
+					   <input type="button" id="btnSubmit_2" class="btn btn-warning" value="确定提交"/>
+				</form>
+			  </div>
+
+			  <div  id="PwdProtect_2"  class="col-sm-6 col-md-8"  style="border-left: 1px solid gray"> 
+					  <div class="col-sm-6 col-md-12 queAndans" id="queAndans">	
+					  		<button class="btn btn-success" id="alterQue">修改密保问题</button><br/>
+					  		
+					  </div>
+					<div class="col-sm-12 col-md-12" id="alterQueFrom" style="display: none">
+					<button class="btn btn-success" id="backQue">返回</button><br/>
+					<form  id="settingFrom" class="form-inline">
+					  <div class="form-group">问题1：
+						<label for="InputQue">Que1</label>
+						<input type="text" class="form-control" name="question" id="ReInputQue">
+						答案1：<input type="text" class="form-control" name="answer" id="ReInputAns">
+					  </div><br/>
+					  <div class="form-group">问题2：
+						<label for="InputQue">Que2</label>
+						<input type="text" class="form-control" id="ReInputQue" name="question">
+						答案2：<input type="text" class="form-control" id="ReInputAns" name="answer">
+					  </div><br/>
+					  <div class="form-group">问题3：
+						<label for="InputQue">Que3</label>
+						<input type="text" class="form-control" id="ReInputQue" name="question">
+						答案3：<input type="text" class="form-control" id="ReInputAns" name="answer">
+					  </div><br/>
+					   <input type="button" id="btnSubmit_3" class="btn btn-warning" value="确定提交"/>
+					</form>
+					</div>
+			  </div>
+			 </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="well well-lg">
+	<span>Design by：</span><span id="name_bottom"></span> <br/><br/>
+		<script type="text/javascript">
+		document.write(Date());
+		</script>
+	</div>
+
+	<div>
+
+<div>
+
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../JS/jquery-form.js"></script>
+<script type="text/javascript" src="../JS/jquery.cookie.js"></script>
+<script type="text/javascript" src="JS/mycenter.js"></script>

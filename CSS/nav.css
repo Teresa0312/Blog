@@ -1,0 +1,78 @@
+ .navbar{
+	padding:0% 5%;	
+	background:rgb(255,255,255,.7);
+	border:0px;
+	transition:all 0.6s;
+}
+ .navbar:hover{
+	background: rgb(255,255,255,1);
+}
+ .navbar-default .navbar-nav > li > a{
+	color:black;	
+}
+
+ .navbar-default .navbar-brand {
+    color:black;
+}
+
+ .navbar-default .navbar-brand:hover {
+    color:black;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color:black; 
+}
+
+ .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color:black;
+   /* background-color: transparent;*/
+}
+ .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color:black;
+    background-color:transparent;
+}
+ .navbar-form .form-control{
+	background:rgba(222,222,222,.4);
+	border: 0;
+	transition: all 0.6s;
+	color:black;
+	outline: none;
+}
+
+ .navbar-form .form-control:hover{
+	background:rgba(255,255,255,1.0);
+	color:black;
+	border: 0;
+	outline: none;
+}
+
+ .btn-default{
+	border:0;
+	background: transparent;
+	color:black;
+	transition: all 0.6s;
+}
+
+ .btn-default:hover{
+	border:0;
+	background: transparent;
+	color:black;
+	transition: all 0.6s;
+}
+
+
+
+ .navbar li a{
+
+}
+
+ .navbar a:hover{
+	color:black;
+	transition:all 0.6s;
+	transform:scale(1.2);
+}
+
+.navbar .share{
+	color:black;
+
+}

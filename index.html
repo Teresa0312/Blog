@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="CSS/animate.css">
+    <script src="JS/jquery.min.js"></script> 
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script> 
+    <script src="JS/index.js"></script> 
+    <script src="JS/jquery.cookie.js"></script> 
+    <script src="JS/jquery.easings.min.js"></script> 
+    <script src="JS/jquery.slimscroll.min.js"></script> 
+    <script src="JS/jquery.fullPage.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+        $('#dowebok').fullpage({
+            afterLoad: function(anchorLink, index){
+                    if(index == 2){
+                        $("#hello").css("display","block");
+                        $("#hello").attr("class","col-md-12 hello animated  jackInTheBox ");
+                        $("#artHot").css("display","block");
+                        $("#artHot").attr("class","col-md-12 animated slideInUp ");
+                    }
+                    if(index == 3){
+                        $("#life").css("display","block");
+                        $("#life").attr("class","col-md-8 life animated  jackInTheBox ");
+                
+                        $("#pics_1").attr("class","col-md-5 pics animated zoomIn ");
+                        $("#pics_2").attr("class","col-md-5 pics animated zoomIn ");
+                        $("#pics_1").css("display","block");
+                        $("#pics_2").css("display","block");   
+                    }
+                    if(index == 4){
+                        $("#end").css("display","block");
+                        $("#end").attr("class","col-md-12 end animated  jackInTheBox ")            
+                        $("#colums").attr("class","col-md-12 colums animated zoomIn ");
+                        $("#colums").css("display","block"); 
+                        var w=$("#colum").width();
+                        $("div").filter("#colum").height(w);
+                        $("div").filter("#colum").css("line-height",w*0.03);
+                    }
+            }
+        });
+    });
+    </script>  
+</head>
+<body>
+<div id="dowebok">
+    <div class="section bg_1">
+    <div  class="btn-group loginbtn" role="group"  id="">
+    <button type="button" class="login btn" data-toggle="modal" data-target="#myModal">登录</button>
+    </div> 
+    <div class="col-md-12 top" id="infor">
+        <div class="col-md-4">  
+        </div>
+        <div class="col-md-4 txtCenter">
+            <img id="logoImg" class="logoImg" src=" " alter="I am logo">
+            <h1 class="name">欢迎来到<span id="username"></span>的博客</h1>
+        </div>
+        <div class="col-md-1" id="ww"></div>
+        <script type="text/javascript">
+            $("#logoImg").width($("#ww").width()*1);
+            $("#logoImg").height($("#ww").width()*1);
+        </script>
+        <div class="col-md-12 sign" id="signature"></div> 
+        <div class="col-md-12 arrow_1 animated bounce infinite">
+            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+        </div>
+    </div>
+    </div>
+
+    <div class="section bg_2">
+        <div class="col-md-12 hello" style="display: none;" id="hello"> 
+           <p>
+           林林总总的想法，甚或吉光片羽，初潜于我们的脑中时，只是一些微渺的闪烁的光点。<br/>
+           少数可能会被你注意到，而更多的则一闪而灭，如一抹流星消逝在思想的暗夜，<br/>
+           或是作为一艘沉船，永远地躺着意识的深谷。<br/>
+           而写作则可以把它们点燃，让它们浮现，<br/>
+           让它们奔涌而出，让它们自己生长、壮大然后完整。<br/></p>
+        </div>
+        <div class="col-md-12" id="artHot" style="display: none;">
+
+        </div>
+        <div class="col-md-12 arrow_2 animated bounce infinite">
+            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+        </div>
+    </div>
+
+    <div class="section bg_3">
+    <div class="col-md-5 pics" id="pics_1" style="display: none;">
+        <div class="col-md-6 thumbnail picA">
+              <img class="" id="picA" src="css/images/bg.png">
+        </div>
+        <div class="col-md-6 thumbnail picB">
+              <img class=""  id="picB" src="css/images/bg.png">
+        </div>
+        <div class="col-md-6 thumbnail picC">
+              <img class=""  id="picC" src="css/images/bg.png">
+        </div>
+    </div>
+    <div class="col-md-5 pics" id="pics_2">
+        <div class="col-md-6 thumbnail picD">
+              <img class=""  id="picD" src="css/images/bg.png">
+        </div>
+        <div class="col-md-6 thumbnail picE">
+              <img class=""  id="picE" src="css/images/bg.png">
+        </div>
+        <div class="col-md-6 thumbnail picF">
+              <img class=""  id="picF" src="css/images/bg.png">
+        </div>
+    </div>
+        
+    <div class="col-md-9 life" id="life" style="display: none;">
+        用文字记录生活点滴 用光影留住美好的事物 用心发现身边的美！
+    </div>
+    <div class="col-md-12 arrow_3 animated bounce infinite">
+            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+    </div>
+    </div>
+
+    <div class="section bg_4">
+        <div class="col-md-12 end" id="end" style="display: none">欢迎来到我的世界!</div>
+        <div class="col-md-12 colums" id="colums" style="display: none">
+            <div class="col-md-2 colum" id="colum" onclick="window.location.href='Public/Article.html'">文章</div>
+            <div class="col-md-2 colum" id="colum" onclick="window.location.href='Public/Album.html'">相册</div>
+            <div class="col-md-2 colum" id="colum" onclick="window.location.href='Public/Video.html'">视频</div>
+            <div class="col-md-2 colum" id="colum" onclick="window.location.href='Public/Message.html'">留言</div>
+        </div>
+    </div>
+
+</div>
+</body>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">登录</h4>
+          </div>
+          <div class="modal-body">
+          <h1><b>BLOG</b></h1>
+            <form class="">
+              <div class="control-group">
+                <label class="control-label" for="inputNumber">手机号码 Phone Number</label>
+                  <input type="text"  class="form-control tel" id="inputNumber" name="usertel" placeholder="手机号码 Phone Number">
+              </div><!-- control-group end -->
+
+              <div class="control-group">
+                <label class="control-label" for="inputPassword">密码 Password</label>
+                  <input type="password"  class="form-control pwd" id="inputPassword" name="password" placeholder="密码 Password">
+              </div><!-- control-group end -->
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-success" id="btnSubmit">登录</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#passwd">忘记密码</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="passwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">忘记密码</h4>
+          </div>
+          <div class="modal-body content">
+            <div class="inputTel"><h4>请输入手机号：</h4>
+            <form>
+             <div class="form-group">
+                <label for="telNum">手机号</label>
+                <input type="text" class="form-control" name="telNum" id="InputNum">
+             </div>
+              <input type="button" class="btn btn-info" id="butSubmit_1" value="提交"/>
+            </form>
+            </div>
+
+            <div class="inputAns">
+                <form class="form-inline">
+                    <div class="form-group"><span>问题1：</span>
+                        <span id="Question"></span><br/>
+                        <label for="InputAns">Que1</label>
+                        <span>答案：</span>
+                        <input type="text" class="form-control" name="answer" id="InputAns"/>
+                    </div><br/><!-- form-group end -->
+
+                    <div class="form-group"><span>问题2：</span>
+                        <span id="Question"></span><br/>
+                        <label for="InputAns">Que2</label>
+                        <span>答案：</span>
+                        <input type="text" class="form-control" name="answer" id="InputAns"/>
+                    </div><br/><!-- form-group end -->
+
+                    <div class="form-group"><span>问题3：</span>
+                        <span id="Question"></span><br>
+                        <label for="InputAns">Que3</label>
+                        <span>答案：</span>
+                        <input type="text" class="form-control" name="answer" id="InputAns"/>
+                    </div><br/><!-- form-group end -->
+                    <input type="button" id="butSubmit_2" class="btn btn-info" value="提交"/>
+                </form><!-- form-inline end --> 
+            </div>
+
+            <div class="resetPass">
+                <form class="form-inline">
+                    <div class="form-group"><span>请输入新密码：</span><br/>
+                        <label for="InputPass">Pass1</label>
+                        <input type="password" class="form-control" name="password" id="InputPass">
+                    </div><br/><!-- form-group end -->
+                    <div class="form-group"><span>请确认新密码：</span><br/>
+                        <label for="InputPass">Pass2</label>
+                        <input type="password" class="form-control" name="password" id="InputPass">
+                    </div><br/><!-- form-group end -->
+                    <input type="button" id="butSubmit_3" class="btn btn-info" value="提交"/>
+                </form><!-- form-inline end --> 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            <button type="button" class="btn btn-success" id="btnSubmit">登录</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</html>

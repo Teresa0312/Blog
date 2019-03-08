@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../CSS/nav.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/manage.css"/>
+	<link href="themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+	
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="../index.html"><strong>BLOG</strong></a>
+		</div><!-- navbar-header end -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		 <ul class="nav navbar-nav">
+			<li><a href="MyCenter.html">账号管理</a></li>
+			<li><a href="Article.html">文章管理</a></li>
+			<li><a href="Album.html">相册管理</a></li>
+			<li><a href="Video.html">视频管理</a></li>
+			<li><a href="Message.html">留言管理</a></li>
+		  </ul><!-- nav navbar-nav end -->
+		  <ul class="nav navbar-nav navbar-right"> 
+			<li id="signin"><a href="../index.html">首页</a></li>
+		  </ul> 
+		</div><!-- collapse navbar-collapse end -->
+
+	</nav><!-- nav end -->
+
+	<div class="container-fluid add"> 
+		<from class="col-md-10 middle" accept-charset="UTF8">
+		<a href="article.html"><button class="btn btn-info" id="backArt">返回文章管理</button></a><br/><br/>
+		  <div class="form-group">
+		    <label for="title">标题</label>
+		    <input type="text" class="form-control" id="title" placeholder="标题">
+		  </div>
+		  <div class="form-group">
+		    <label for="title">标签</label>
+		    <select id="type" class="form-control">
+		   
+		    </select>
+		  </div>
+		  <div class="form-group">
+		    <label for="author">作者</label>
+		    <input type="text" class="form-control" id="author">
+		  </div>
+		  <div class="form-group">
+		    <label for="myEditor">文章内容</label>
+		    <textarea id="myEditor"></textarea>  
+				
+		   </div>
+		 <button type="submit" class="btn btn-success" id="add">发表文章</button>
+		</from>
+	</div>
+
+	<div class="well well-lg">
+	<span>Design by：</span><span id="name_bottom"></span> <br/><br/>
+		<script type="text/javascript">
+		document.write(Date());
+		</script>
+	</div>
+	
+	
+
+</body>
+</html>
+<script type="text/javascript" src="../JS/jquery.js"></script>
+<script type="text/javascript" src="../JS/jquery.cookie.js"></script>
+<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="JS/add.js"></script>
+<script type="text/javascript" charset="utf-8" src="JS/umeditor.js"></script>
+<script type="text/javascript" charset="utf-8" src="JS/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="JS/umeditor.min.js"></script>
+<script type="text/javascript" src="lang/zh-cn/zh-cn.js"></script> 
+<script type="text/javascript">
+	//实例化编辑器
+	var um = UM.getEditor('myEditor');	   
+</script> 

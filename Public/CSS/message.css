@@ -1,0 +1,43 @@
+
+body{
+	background:url("images/bg.png") #FFFBE8;	
+}
+
+.h-samll{
+	padding-right: 20px;
+}
+
+.row .media p{
+	line-height: 1.6;
+}
+.media-left img{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	padding: 1%;
+	border: 1px solid gray;
+}
+.h-span small span{
+	padding-top: 15px;
+	line-height: 2;
+}
+.container{
+	margin-top: 5.5%; 
+}
+.container .infor{
+	margin-bottom: 2%; 
+	background: white;
+	padding: 1%;
+	border: 2px solid #e8e8e8;
+}
+
+
+
+.well{
+	background: black;
+	padding:5%;
+	color: white;
+	text-align: center;
+	margin:0;
+
+}

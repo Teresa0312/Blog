@@ -1,0 +1,86 @@
+body{
+	background:url("images/bgimage.jpg") no-repeat fixed;	
+	background-size: 100% 100%;
+}
+
+.container{
+	margin:10% auto 3%;
+}
+.nav-tabs li{
+	background: rgba(255,255,255,.7);
+
+}
+.nav-tabs a,h2{
+	color: #428BFF;
+	font-size: 16px;
+	font-weight:bold;
+}
+.tab-content{
+	background: rgba(255,255,255,.7);
+}
+.tab-pane{
+	padding:2%;
+}
+.row-left{
+	height:100%;
+	padding:5%;
+}
+.thumbnail{
+	border:0;
+	
+}
+.thumbnail img{
+	width: 40%;
+	height: 40%;
+	padding: 1%;
+	border: 1px solid gray;
+	border-radius: 50%;
+}
+
+.fdata {
+	
+	padding-left: 2%;
+	width:100%;
+	margin:0 auto;
+  	line-height: 3.2;
+  	border-bottom: 2px solid #e6e6e6;
+  	overflow: hidden;
+	float: left;
+}
+
+.queAndans .fdata{
+	width: 100%;
+	float: left;
+}
+
+.form-group {
+    padding: 2%;
+}
+
+.form-control{
+	margin-right:5px;
+}
+
+.form-group label{
+	display: none;
+}
+
+/*.btn{
+	outline:none;
+	transition: all 0.6s; 
+}
+.btn:hover{
+	outline:none;
+	transition: all 0.6s; 
+	background-color: #2AA1FF;
+    color: #fff;
+}*/
+
+.well{
+	background: black;
+	padding:5%;
+	color: white;
+	text-align: center;
+	margin:0;
+
+}

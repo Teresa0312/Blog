@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="../CSS/nav.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/manage.css"/>
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="../index.html"><strong>BLOG</strong></a>
+		</div><!-- navbar-header end -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		 <ul class="nav navbar-nav">
+			<li><a href="MyCenter.html">账号管理</a></li>
+			<li><a href="Article.html">文章管理</a></li>
+			<li><a href="Album.html">相册管理</a></li>
+			<li><a href="Video.html">视频管理</a></li>
+			<li><a href="Message.html">留言管理</a></li>
+		  </ul><!-- nav navbar-nav end -->
+		  <ul class="nav navbar-nav navbar-right">
+			<li id="signin"><a href="../index.html">首页</a></li>
+		  </ul> 
+		</div><!-- collapse navbar-collapse end -->
+	
+	</nav><!-- nav end -->
+	<div class="container-fluid">
+		<ul class="nav nav-tabs" role="tablist" id="myTab">
+	    <li role="presentation" class="active">
+	    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">相册管理</a>
+	    </li>
+	  </ul>
+
+	  <!-- Tab panes -->
+	  <div class="tab-content"> 
+	   <img id="image" src="" style="display: none;" />
+	    <div role="tabpanel" class="tab-pane active col-md-12" id="home">
+	     <script type="text/javascript">
+			function saveReport(){
+				$("#uploadPic").ajaxSubmit(function(data){ 
+					console.log(data);
+					if(data.code==0)
+						alert("上传照片成功!");
+					else
+						alert("添加照片失败!")
+				}); 
+				return false; // 必须返回false，否则表单会自己再做一次提交操作，并且页面跳转 
+			}
+		</script>
+	    	<form class="form-inline"  action="http://1483104508.55555.io/blog/UP?method=upPic"  method="post"  enctype="multipart/form-data"  onsubmit="return saveReport()" id="uploadPic" >
+				<div class="form-group">
+					<input type="text" name="usertel"  id="inputTel" style="display: none;">
+					<input type="file" name="pic"  id="inputPic">
+				</div><!-- form-group end -->
+				<div class="form-group">标题：	
+					<input name="title" type="text" class="form-control" id="inputPicTitle">
+				</div><!-- form-group end -->
+				<input class="btn btn-primary" type="submit" id="newPic" value="上传照片"><br/><br/>
+			</form><!-- form-inline end -->
+			<div class="col-md-12" id="showPics">
+				
+			</div>
+			<nav aria-label="Page navigation" >
+			  <ul class="pagination pagination-lg" id="pageNum">
+			  </ul>
+			</nav>
+	    </div>
+	  </div>
+	</div><!-- container-fluid end -->
+
+	<div class="well well-lg">
+	<span>Design by：</span><span id="name_bottom"></span> <br/><br/>
+		<script type="text/javascript">
+		document.write(Date());
+		</script>
+	</div>
+	
+
+</body>
+</html>
+<script type="text/javascript" src="../JS/jquery.js"></script>
+<script type="text/javascript" src="../JS/jquery-form.js"></script>
+<script type="text/javascript" src="../JS/jquery.cookie.js"></script>
+<script type="text/javascript" src="JS/album.js"></script>

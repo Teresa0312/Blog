@@ -1,0 +1,107 @@
+.artHot legend{
+	border-left: 4px solid #F5CE6F;
+	padding: 2%;
+	padding-left: 3%;
+}
+
+.artList{
+	margin-top: 1%;
+}
+
+.typebtn{
+	margin-bottom: 3px;
+}
+
+.artList legend{
+	border-left: 4px solid #D4BBED;
+	padding: 1%;
+	padding-left: 2%;
+}
+
+.search{
+	position: absolute;
+	display: none;
+	background: rgba(255,255,255,1);
+}
+
+.search{
+	padding: 2%;
+	width: 95%;
+	border: 1px dotted grey;
+}
+
+.media{
+	background: rgba(255,255,255,.7);
+}
+
+.msgBtn ,.searchBtn{  
+	position: relative;
+	left: 80%;
+}
+
+
+
+.well{
+	background: black;
+	padding:5%;
+	color: white;
+	text-align: center;
+	margin:0;
+
+}
+.artList .media,.comments .media,.vidList .media{
+	padding: 2%;
+	background: rgba(255,255,255,.7);
+	border-radius: 2%;
+	box-shadow: 0 1px 2px 0 #E2E2E2;	
+}
+
+.comments{
+	margin-bottom: 2%;
+}
+
+.commend legend{
+	padding: 1%;
+	padding-left: 2%;
+	border-left: 4px solid #EA2000;
+}
+
+.artHot .media{
+	background: rgba(255,255,255,0);
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.commend .media{
+	padding: 1%;
+}
+
+.vidList legend{
+	padding: 1%;
+	padding-left: 2%;
+	border-left: 4px solid #39FA43;
+}
+.vidList{
+	margin-top: 1%;
+}
+.artHot legend{
+	padding: 2%;
+	padding-left: 3%;
+}
+
+.picList legend{
+	padding: 1%;
+	padding-left: 2%;
+	border-left: 4px solid #FF01C6;
+}
+.picList{
+	margin-top: 1%;
+}
+.thumbnail img{
+	width: 100%;
+}
+
+.showPic{
+	width: 100%;
+	height: auto;
+}
